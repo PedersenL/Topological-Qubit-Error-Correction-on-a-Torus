@@ -155,7 +155,6 @@ def search_errx(start,parody,point,debugging = False): #also old and bad but it 
         x,y = go_direction2(rows, cols, x, y, direction) # Update x,y based on direction
         if debugging:
             print('step to direction:', direction, 'current position:', (x,y))
-        # Apply modulo to movement within the loop
         if startcopy[(x+1) % rows, y % cols] == -1:
             direction = 'down'
             continue
@@ -170,7 +169,6 @@ def search_errx(start,parody,point,debugging = False): #also old and bad but it 
             continue
         keep = False
 
-    # Apply modulo to final boundary checks
     if startcopy[(point[0]+1) % rows, point[1] % cols] == -1:
         x,y = (point[0]+1) % rows, point[1] % cols
     elif startcopy[point[0] % rows, (point[1]+1) % cols] == -1:
@@ -316,7 +314,6 @@ def check_loop(start,parody,point,groupname,debugging = False):
     x,y = point[0], point[1]
     started = False
     startcopy[x,y] = -groupname
-    # Apply modulo to initial directional checks
     if parody[(point[0]+1) % rows, point[1] % cols] != 0:
         direction = check_around(startcopy, ((point[0]+1) % rows, point[1] % cols))
         if debugging:
@@ -401,7 +398,6 @@ def check_logic_loop(start, parody,debugging = False): #for x y seperate
 
 def test(params):
     failures = 0
-    # Extracting from dict for readability within the loop
     runs = params['runs']
     size = params['size']
 
@@ -429,6 +425,8 @@ def test(params):
             failures += 1
 
     return failures, failures / runs
+
+#Code below is mostly AI-generated as it's not the main focus of the project and just data analysis/plotting
 
 def sweep_variable(variable_name, start, end, steps, is_log, base_params,debugging = False):
     """
@@ -560,17 +558,12 @@ def plot_smoothed_results(all_results_data, window_percentage=0.2, is_log=False)
 
 
 def logistic_model(x, A, k, x0):
-    """
-    A: Asymptote (max value)
-    k: Growth rate (steepness)
-    x0: Midpoint (threshold)
-    """
+
     return 1 / (1 + np.exp(-k * (x - x0)))
 
 def analyze_sweep_data(data):
     plt.figure(figsize=(12, 8))
 
-    # Setup colors using the turbo rainbow scale
     sizes = sorted(data.keys())
     colors = cm.turbo(np.linspace(0.1, 0.9, len(sizes)))
 
@@ -581,8 +574,7 @@ def analyze_sweep_data(data):
         x_data = np.array(data[size]['x'], dtype=float)
         y_data = np.array(data[size]['y'], dtype=float)
 
-        # 2. Initial Guess for the optimizer [A, k, x0]
-        # We guess A=0.9 (based on your data), k=20 (steep), x0=midpoint of x range
+
         initial_guess = [max(y_data), 20, np.median(x_data)]
 
         try:

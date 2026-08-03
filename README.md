@@ -2,9 +2,12 @@
 
 This repository contains the simulation framework and analysis for topological quantum error correction (QEC) on a torus (periodic boundary conditions), comparing standard Toric codes ($XXXX$ and $ZZZZ$ stabilizers) with the $XZZX$ stabilizer code configuration under biased noise models.
 
-**Challenge #7 Team:** Leif, Rose, Vijay, and Gehad  
-**Supervisor:** Elena  
-**Sponsors:** Dunkin' Donuts & Digi (Digitally Enhanced Quantum Technology Master)
+* **Event:** QST-Hack (Quantum Science & Technology Hackathon) under the **DigiQ** (Digitally Enhanced Quantum Technology) Master program
+* **Host University:** Technical University of Denmark (DTU), Department of Physics
+* **Research Group:** Section of Quantum Physics and Information Technology (QPIT)
+* **Supervisor:** Elena Losero (QPIT, DTU Physics)
+* **Challenge #7 Team:** Leif, Rose, Vijay, and Gehad
+* **Sponsors:** Dunkin' Donuts & DigiQ
 
 ---
 
