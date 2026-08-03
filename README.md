@@ -72,6 +72,11 @@ graph TD
 * **XZZX Code vs. Toric Code:** The $XZZX$ code coordinates stabilizers as mixed $X$ and $Z$ operators. Under highly biased noise (where phase-flip errors are much more common than bit-flip errors), the $XZZX$ code exhibits a higher threshold and significantly lower logical failure rates compared to the standard code.
 * **Weighted Matching:** Adjusting the graph weights based on noise bias ($w_x$ vs. $w_y$) improves the decoder performance under biased noise.
 
+## Repository Structure
+
+* [`toric_code.py`](file:///c:/Users/kimpe/OneDrive/Documents/DTU Fag/6th Semester/Topological-Qubit-Error-Correction-on-a-Torus/toric_code.py): The core simulation library containing all helper functions (system startup, stabilizer measurements, syndrome graphing, decoding with MWPM, logical loop checkers, parameter sweeps, and S-curve plotting).
+* [`simulation_analysis.ipynb`](file:///c:/Users/kimpe/OneDrive/Documents/DTU Fag/6th Semester/Topological-Qubit-Error-Correction-on-a-Torus/simulation_analysis.ipynb): The main analysis notebook, which imports the modular functions from `toric_code.py` to run tests and analyze thresholds under standard vs. XZZX bases.
+
 ---
 
 ## Setup & Running the Code
@@ -88,7 +93,8 @@ graph TD
    ```
 
 3. **Explore the Notebooks:**
-   Open the Jupyter environment to run the simulations:
+   Open the Jupyter environment and run `simulation_analysis.ipynb`:
    ```bash
    jupyter notebook
    ```
+
