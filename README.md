@@ -2,7 +2,9 @@
 
 This repository contians a simulation framework for analysis on topological quantum error correction on a torus, comparing toric codes with different stabilizers under biased noise models.
 
-This project was done as part of a Quantum Ideas Factory at the Abbe Center of Photonics and while the code was written by myself (with AI assistance on the data-analysis), the presentation was made with the help of Rose Lambert-hartmann. We are thankful for the assistance of our advisor Elena
+This project was done as part of a Quantum Ideas Factory at the Abbe Center of Photonics and while the code was written by myself (with AI assistance on the data-analysis), the presentation was made with the help of Rose Lambert-hartmann. We are thankful for the assistance of our advisor Elena.
+
+The Toric code, error correction algorithms and our implimentation are explained in `Toric Code Presentation.pdf` although it usually goes along with explanations of the slides.
 
 ## Files
 
