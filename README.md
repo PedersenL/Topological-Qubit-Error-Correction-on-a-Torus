@@ -10,3 +10,5 @@ This project was done as part of a Quantum Ideas Factory at the Abbe Center of P
 * `simulation_analysis.ipynb`: Notebook used to run the simulations and plot the results.
 * `requirements.txt`: Python package dependencies.
 * `.gitignore`: Git ignore patterns.
+* `OriginalNotebook.ipynb`: The original notebook with all simulation runs.
+* `Toric Code Presentation.pdf`: Presentation slides explaining the project.
